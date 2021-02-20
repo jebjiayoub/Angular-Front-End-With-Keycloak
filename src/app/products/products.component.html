@@ -1,0 +1,14 @@
+<div class="container mt-5">
+    <p>products works!</p>
+    <div class="container text-danger" *ngIf="errorMessage"><h3>{{errorMessage}}</h3></div>
+    <table *ngIf="products" class="table">
+        <tr>
+            <th>Nom</th><th>Prix</th><th>Quantity</th>
+        </tr>
+        <tr *ngFor="let s of products._embedded.products">
+            <td>{{s.name}}</td>
+            <td>{{s.price}}</td>
+            <td>{{s.quantity}}</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,13 @@
+<div class="container mt-5">
+    <p>customers works!</p>
+    <div class="container text-danger" *ngIf="errorMessage"><h3>{{errorMessage}}</h3></div>
+    <table *ngIf="customers" class="table">
+        <tr>
+            <th>Nom</th><th>Email</th>
+        </tr>
+        <tr *ngFor="let s of customers._embedded.customers">
+            <td>{{s.name}}</td>
+            <td>{{s.email}}</td>
+        </tr>
+    </table>
+</div>
